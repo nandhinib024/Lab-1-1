@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EB  Bill Calculator .</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    body
+    {
+        background-size: 100%;
+        background-repeat:cover ;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiwkDnlNp9aNXQJUUpapeYkG4w1AkODZmFQA&usqp=CAU); 
+        /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUx5kboRr1HKhZEJz8xEFNocebGzTD6fIVew&usqp=CAU);
+        /*background-image: url(https://www.pngmagic.com/product_images/beautiful-blue-color-background.png);*/
+    }
+    #para{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            color:#0d344b;
+        }
+        #box
+{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: 50%;
+    padding:0px;
+    height:40%;
+    background-image: url(https://www.pngmagic.com/product_images/beautiful-blue-color-background.png);
+    /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUx5kboRr1HKhZEJz8xEFNocebGzTD6fIVew&usqp=CAU);*/
+    background-size: 100%;
+    background-repeat:cover ;
+}
+     button
+     { 
+   width: 20%;
+   height: 35px;
+   padding: 0px;
+   margin: 15px ;
+   margin-left:-110px;
+   border-width: 3px;
+   border-radius: 7.5px;
+   border-style: solid;
+   background-color:gainsboro;
+       
+   
+   }
+   .btn {
+       
+       width: 500px;
+       padding: 0px;
+       display: inline-block;
+       margin: 0 auto;
+       text-align:center;
+     }
+    </style>
+    <script src="eb.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light "style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;  ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="cgpa.html" style="padding-left:10px;padding-right:250px; color:#0d344b ;"><b>CGPA Calculator</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="gpa.html"  style="padding-left:10px;padding-right:250px; color:#0d344b ;"><b>GPA Calculator</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="eb.html"  style="padding-left:10px;padding-right:200px; color:#0d344b ;"><b>EB Calculator</b></a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link active" href="own.html"  style="padding-left:10px;padding-right:00px; color:#0d344b ;"><b>Currency Converter</b></a>
+              </li></ul>
+          </div>
+        </div>
+    </nav>
+    <hr style="background-color: black; margin-top: 0px;">
+       <div class=" container bg-info" id="box"><br>
+          <p id="para">
+            EB BILL CALCULATOR   
+          </p>
+          <br>
+          <div class="row">
+              <div class="col-md-6 " >
+                  <p class="ml-5 text-center text-dark font-weight-bold " style="font-size: 17px;">TARIFF CHECK</p>
+              </div>
+              <div class="col-md-4">
+                  <div class="form-group" >
+                      <select   class="form-control" id="c"  required >
+                         <option value="0"> <--Select tariff --></option>
+                         <option value="1">Domestic</option>
+                         <option value="2">Commercial</option>
+                      </select><br>
+                  </div>
+              </div>
+              <div class="col-md-6 " >
+                <p class="ml-5 text-center text-dark font-weight-bold " style="font-size: 17px;">BILLING -CYCLE</p>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group" >
+                    <select   class="form-control" id="c2"  required >
+                       <option value="">Bi-Monthly</option>
+                       <option value="">Monthly</option>
+                    </select><br>
+                </div>
+              </div>
+              <div class="col-md-6 " >
+                <p class="ml-5 text-center text-dark font-weight-bold " style="font-size: 16px;">CONSUMED UNITS </p>
+              </div>
+              <div class="col-md-4" >
+                <form  action="">
+                    <input type="number" placeholder="Consumed Units" id="unit" class="form-control form-control-sm">
+                </form>
+            </div>
+            <div class="col-md-6">
+              <div class="btn ">
+                <button  onclick="calc()"> CALCULATE</button>
+              </div>
+            </div>
+            <div class="col-md-4  mt-2" >
+              <p id="ans" class="col-md-4  font-weight-bold " style="font-size: 20px; "></p>
+            </div>
+
+          </div>   
+        </div>
+       
+    
+</body>
+</html>
